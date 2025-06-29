@@ -1,4 +1,4 @@
-# Singapore Connections Game
+# Singapore Connections Game - Built by Amazon Q CLI
 
 A ReactJS puzzle game inspired by the New York Times Connections, featuring Singapore-themed categories including Singlish expressions, local food, landmarks, and cultural knowledge.
 
