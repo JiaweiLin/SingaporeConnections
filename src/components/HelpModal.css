@@ -1,0 +1,243 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 24px 0 24px;
+  border-bottom: 2px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  color: #dc143c;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+  color: #dc143c;
+}
+
+.modal-body {
+  padding: 0 24px;
+}
+
+.help-section {
+  margin-bottom: 24px;
+}
+
+.help-section h3 {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.help-section p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.help-section ul {
+  color: #666;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.help-section li {
+  margin-bottom: 8px;
+}
+
+.difficulty-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.difficulty-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.difficulty-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.difficulty-item.yellow .difficulty-color {
+  background: #ffeb3b;
+}
+
+.difficulty-item.green .difficulty-color {
+  background: #4caf50;
+}
+
+.difficulty-item.blue .difficulty-color {
+  background: #2196f3;
+}
+
+.difficulty-item.purple .difficulty-color {
+  background: #9c27b0;
+}
+
+.difficulty-item strong {
+  color: #333;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.difficulty-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.modal-footer {
+  padding: 20px 24px 24px 24px;
+  text-align: center;
+  border-top: 2px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+.close-modal-btn {
+  background: linear-gradient(135deg, #dc143c 0%, #b91c3c 100%);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.close-modal-btn:hover {
+  background: linear-gradient(135deg, #b91c3c 0%, #a01836 100%);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    max-height: 95vh;
+  }
+  
+  .modal-header {
+    padding: 20px 20px 0 20px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-body {
+    padding: 0 20px;
+  }
+  
+  .modal-footer {
+    padding: 20px;
+  }
+  
+  .help-section h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-header {
+    padding: 16px 16px 0 16px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modal-body {
+    padding: 0 16px;
+  }
+  
+  .modal-footer {
+    padding: 16px;
+  }
+  
+  .close-modal-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}

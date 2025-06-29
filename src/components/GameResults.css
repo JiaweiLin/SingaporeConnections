@@ -1,0 +1,163 @@
+.game-results {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  padding: 0 20px;
+}
+
+.results-title {
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.solved-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.solved-category {
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideInFromTop 0.5s ease;
+  color: #333;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.category-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.difficulty-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-words {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.category-description {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+/* Animation for new solved categories */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Difficulty-specific styling adjustments */
+.solved-category[style*="rgb(255, 235, 59)"] {
+  /* Yellow - darker text for better contrast */
+  color: #333;
+}
+
+.solved-category[style*="rgb(76, 175, 80)"] {
+  /* Green - white text */
+  color: white;
+}
+
+.solved-category[style*="rgb(76, 175, 80)"] .difficulty-label {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.solved-category[style*="rgb(33, 150, 243)"] {
+  /* Blue - white text */
+  color: white;
+}
+
+.solved-category[style*="rgb(33, 150, 243)"] .difficulty-label {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.solved-category[style*="rgb(156, 39, 176)"] {
+  /* Purple - white text */
+  color: white;
+}
+
+.solved-category[style*="rgb(156, 39, 176)"] .difficulty-label {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-results {
+    padding: 0 15px;
+  }
+  
+  .results-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .solved-category {
+    padding: 14px;
+  }
+  
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .category-name {
+    font-size: 1.1rem;
+  }
+  
+  .difficulty-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-results {
+    padding: 0 10px;
+  }
+  
+  .solved-category {
+    padding: 12px;
+  }
+  
+  .category-name {
+    font-size: 1rem;
+  }
+  
+  .category-words {
+    font-size: 0.9rem;
+  }
+  
+  .category-description {
+    font-size: 0.8rem;
+  }
+}

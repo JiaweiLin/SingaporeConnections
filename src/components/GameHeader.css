@@ -1,0 +1,146 @@
+.game-header {
+  background: linear-gradient(135deg, #dc143c 0%, #b91c3c 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.game-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-subtitle {
+  font-size: 1.1rem;
+  margin: 5px 0 0 0;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.game-stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mistakes-counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mistakes-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.mistakes-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.mistake-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.mistake-dot.filled {
+  background: #ffeb3b;
+  border-color: #ffeb3b;
+  box-shadow: 0 0 8px rgba(255, 235, 59, 0.6);
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.header-btn {
+  padding: 10px 20px;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header-btn:hover {
+  background: white;
+  color: #dc143c;
+  transform: translateY(-2px);
+}
+
+.help-btn:hover {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.restart-btn:hover {
+  background: #ff9800;
+  border-color: #ff9800;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .game-title h1 {
+    font-size: 2rem;
+  }
+  
+  .game-subtitle {
+    font-size: 1rem;
+  }
+  
+  .header-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-header {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .game-title h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .header-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
